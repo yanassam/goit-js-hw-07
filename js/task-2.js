@@ -15,12 +15,25 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-images.forEach((element) => {
-  const li = document.createElement("li");
-  li.classList = "gallery-element";
-  gallery.appendChild(li);
-  const image = document.createElement("img");
-  image.src = element.url;
-  image.alt = element.alt;
-  li.appendChild(image);
-});
+// 1 варіант
+// images.forEach((element) => {
+//   const li = document.createElement("li");
+//   li.classList.add("gallery-element");
+//   gallery.appendChild(li);
+//   const image = document.createElement("img");
+//   image.src = element.url;
+//   image.alt = element.alt;
+//   li.appendChild(image);
+// });
+
+// 2 варіант
+const galleryItemsHtml = images
+  .map(
+    (element) => `
+  <li class="gallery-element">
+    <img src="${element.url}" alt="${element.alt}">
+  </li>`
+  )
+  .join("");
+
+gallery.innerHTML = galleryItemsHtml;
