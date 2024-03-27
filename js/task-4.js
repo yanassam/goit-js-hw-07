@@ -11,6 +11,7 @@ function infoSubmit(event) {
   }
 
   const formData = {};
+
   for (const element of this.elements) {
     if (element.name) {
       formData[element.name] = element.value.trim();
