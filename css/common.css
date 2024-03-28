@@ -6,10 +6,8 @@ body {
   color: #2e2f42;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-
   line-height: 1.33; /* 133.333% */
-  letter-spacing: 0.96px;
-
+    letter-spacing: 0.96px;
   background: #e6e6e9;
 }
 
@@ -97,21 +95,120 @@ ul {
 .gallery {
   max-width: 1128px;
   padding-top: 100px;
-margin: 0 auto;
+ margin: 0 auto;
  display: flex;
  flex-wrap: wrap;
  justify-content: space-between;
 
-      }
+}
 
-      .gallery-element{
-        width: 360px;
-        height: 300px;
-        overflow: hidden;
-      }
+.gallery-element{
+ width: 360px;
+ height: 300px;
+ overflow: hidden;
+}
       
-      .gallery-element img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+.gallery-element img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* task-3 */
+#name-input{
+  border-radius: 4px;
+  border: 1px solid #808080;
+  width: 360px;
+ margin: 24px 0 16px 24px;
+}
+#name-input:focus{
+  border: 1px solid #000000;
+}
+#name-input + h1 {
+  margin-left: 24px;
+}
+
+/* task-4 */
+.login-form{
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.login-form input { 
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  padding: 10px;
+  margin-bottom: 10px;  
+}
+
+.login-form input:focus{
+  border: 1px solid #000000;
+} 
+.login-form input:hover{
+  border: 1px solid #000000;
+} 
+button{
+  color: #FFFFFF;
+  background-color: #4E75FF;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  height: 40px;
+}
+.login-form button{
+  width: 86px; 
+}
+button:hover{
+  background-color: #6C8CFF;
+}
+
+.login-form label {
+  display: flex;
+  flex-direction: column; 
+}
+
+.login-form input {
+  margin-top: 4px; 
+}
+/* task-5 */
+.change-color{
+  width: 148px;
+  font-family: 'Montserrat', sans-serif;
+}
+.widget{
+  padding-top: 100px;
+  padding-left: 88px;
+  display: flex;
+  flex-direction: column;
+  gap:10px
+}
+/* task-6 */
+#controls{
+  margin-top: 24px;
+  margin-left: 24px;
+  padding: 32px;
+  display: flex;
+  gap: 16px;
+}
+#controls input{
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 150px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+}
+#boxes{
+  display: flex;
+  padding: 50px;
+  gap:16px;
+  flex-wrap: wrap;
+}
+
+button[data-create] { 
+  width: 120px;
+}
+button[data-destroy] { 
+  width: 120px;
+  background-color: #FF4E4E;
+}
